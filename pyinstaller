@@ -1,1 +1,0 @@
-pyinstaller --onefile --windowed --icon=app.ico --add-data "apps\systems.json;apps" launcher.py
