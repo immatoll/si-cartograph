@@ -2,6 +2,8 @@ launcher.spec
 app.ico
 /apps/__pycache__
 /apps/__init__.py
+.gitignore
+pyinstaller
 
 /build
 /dist
