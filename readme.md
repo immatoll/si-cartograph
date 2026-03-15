@@ -53,12 +53,9 @@ Run the launcher:
 python launcher.py
 ```
 
-Or run the individual apps:
+Experimental Mode (manual shutdown):
 ```bash
-python apps/locator.py
-```
-```bash
-python apps/overlay.py
+python launcher.py -frameless
 ```
 
 ## Requirements
