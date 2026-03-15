@@ -1,35 +1,29 @@
-import subprocess
-import sys
+import threading
 import time
 
-# List your scripts here
-scripts = [
-    ["python", "apps/locator.py"],
-    ["python", "apps/overlay.py"]
-]
+from apps.locator import main as locator_main
+from apps.overlay import main as overlay_main
 
-processes = []
 
-try:
-    # Start all scripts
-    for cmd in scripts:
-        print(f"Starting: {' '.join(cmd)}")
-        p = subprocess.Popen(cmd)
-        processes.append(p)
+def run_locator():
+    try:
+        locator_main()
+    except Exception as e:
+        print(f"Locator crashed: {e}")
 
-    print("All services started. Press Ctrl+C to stop everything.")
 
-    # Keep launcher alive
-    while True:
-        time.sleep(1)
+def main():
+    locator_thread = threading.Thread(target=run_locator, daemon=True)
+    locator_thread.start()
 
-except KeyboardInterrupt:
-    print("\nStopping all services...")
+    print("Locator started.")
+    print("Starting overlay...")
 
-    for p in processes:
-        p.terminate()
+    try:
+        overlay_main()
+    except KeyboardInterrupt:
+        print("\nStopping application...")
 
-    for p in processes:
-        p.wait()
 
-    print("All services stopped.")
+if __name__ == "__main__":
+    main()

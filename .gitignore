@@ -1,1 +1,8 @@
-launcher.bat
+launcher.spec
+app.ico
+/apps/__pycache__
+/apps/__init__.py
+
+/build
+/dist
+/.venv

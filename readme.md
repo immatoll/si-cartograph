@@ -28,38 +28,42 @@ A Python tool that watches your **Frontier chat logs** for system location chang
 
 ---
 
+## Option 1: Run the executable
+Download the latest `si-cartograph.exe` from the [Releases page](https://github.com/immatoll/si-cartograph/releases).
+
+## Option 2: Run from source
+1. Clone the repository:
+```bash
+git clone https://github.com/YourUsername/si-cartograph.git
+cd si-cartograph
+```
+2. Create a virtual environment and install dependencies:
+```bash
+git clone https://github.com/YourUsername/si-cartograph.git
+cd si-cartograph
+```
+3. Create a virtual environment and install dependencies:
+```bash
+python -m venv .venv
+.venv\Scripts\activate
+pip install -r requirements.txt
+```
+Run the launcher:
+```bash
+python launcher.py
+```
+
+Or run the individual apps:
+```bash
+python apps/locator.py
+```
+```bash
+python apps/overlay.py
+```
+
 ## Requirements
 
 - Python 3.10+
 - Windows (or modify the chatlog path manually)
 - [websockets](https://pypi.org/project/websockets/)
-- Optional: [pywebview](https://pypi.org/project/pywebview/) if you want to display the data in a simple GUI overlay.
-
-## Install dependencies:
-
-```bash
-pip install websockets pywebview
-```
-or
-```bash
-pip install -r requirements.txt
-```
-
----
-
-## Requirements
-
-Run overlay, websocket and chat log parser:
-```bash
-python launcher.py (for Websocket + Webviewer)
-```
-
-Run websocket and chat log parser only::
-```bash
-python apps/locator.py (for Websocket only)
-```
-
-Run overlay only:
-```bash
-python apps/overlay.py 
-```
+- [pywebview](https://pypi.org/project/pywebview/)
