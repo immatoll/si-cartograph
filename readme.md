@@ -6,12 +6,21 @@ A Python tool that watches your **Frontier chat logs** for system location chang
 
 ## Features
 
+### Chat log Reader: 
 - Monitors the latest `Local_*.txt` chat log file (Windows: "%USERPROFILE%\Documents\Frontier\logs\Chatlogs")
 - Detects when the player changes local system channels.
-- Broadcasts the current system name and system ID to connected WebSocket clients (e.g. www.silver-tribe.com/scout)
 - Automatically detects log file encoding (`UTF-8`, `UTF-16`, `UTF-16-BE`, `UTF-8-SIG`).
 
-Privacy Note: Websocket Server (Python) <> Client (e.g. JavaScript) communication works 
+### Websocket (Server): 
+- Broadcasts the current system name and system ID to connected WebSocket clients (e.g. www.silver-tribe.com/scout)
+- Websocket server runs via `ws://localhost:9001`
+
+### Webviewer Overlay: 
+- Simple Webviewer Overlay (Mini-Browser)
+- Default-URL: `https://www.silver-tribe.com/scout`*
+- Default-Settings: `width=480, height=710, frameless=False, on_top=True`
+
+*Note: Websocket Server <> Client communication runs locally within the browser (Python <> JavaScript).
 
 ---
 
@@ -26,19 +35,27 @@ Privacy Note: Websocket Server (Python) <> Client (e.g. JavaScript) communicatio
 
 ```bash
 pip install websockets pywebview
+```
 
 ```bash
 pip install -r requirements.txt
+```
 
 ---
 
 ## Requirements
 
+Run overlay, websocket and chat log parser:
 ```bash
 python launcher.py (for Websocket + Webviewer)
+```
 
+Run websocket and chat log parser only::
 ```bash
 python apps/locator.py (for Websocket only)
+```
 
+Run overlay only:
 ```bash
-python apps/overlay.py (for Overlay only)
+python apps/overlay.py 
+```
