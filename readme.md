@@ -36,7 +36,7 @@ A Python tool that watches your **Frontier chat logs** for system location chang
 ```bash
 pip install websockets pywebview
 ```
-
+or
 ```bash
 pip install -r requirements.txt
 ```
