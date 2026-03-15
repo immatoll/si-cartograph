@@ -16,12 +16,12 @@ A Python tool that watches your **Frontier chat logs** for system location chang
 - Automatically detects log file encoding (`UTF-8`, `UTF-16`, `UTF-16-BE`, `UTF-8-SIG`).
 
 ### Websocket (Server): 
-- Broadcasts the current system name and system ID to connected WebSocket clients (e.g. www.silver-tribe.com/scout)
+- Broadcasts the current system name and system ID to connected WebSocket clients (e.g. `https://www.silver-tribe.com/cartograph`)
 - Websocket server runs via `ws://localhost:9001`
 
 ### Webviewer Overlay: 
 - Simple Webviewer Overlay (Mini-Browser)
-- Default-URL: `https://www.silver-tribe.com/scout`*
+- Default-URL: `https://www.silver-tribe.com/cartograph`*
 - Default-Settings: `width=480, height=710, frameless=False, on_top=True`
 
 *Note: Websocket Server <> Client communication runs locally within the browser (Python <> JavaScript).

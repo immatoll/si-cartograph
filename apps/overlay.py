@@ -1,8 +1,8 @@
 import webview
 
 webview.create_window(
-    "SILVER.INTEL.CARTOGRAPHER",
-    "https://www.silver-tribe.com/cartographer",
+    "SILVER.INTEL.CARTOGRAPH",
+    "https://www.silver-tribe.com/cartograph",
     width=480,
     height=710,
     frameless=False,
