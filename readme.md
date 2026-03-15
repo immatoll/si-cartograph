@@ -1,4 +1,4 @@
-# Frontier Chat Location WebSocket Tool
+# Frontier Chat Location Parser + WebSocket Server
 
 A Python tool that watches your **Frontier chat logs** for system location changes and broadcasts the current location over a WebSocket server in real time.
 
