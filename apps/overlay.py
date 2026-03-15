@@ -1,8 +1,8 @@
 import webview
 
 webview.create_window(
-    "SILVER POI REPORTER",
-    "https://www.silver-tribe.com/scout",
+    "SILVER.INTEL.CARTOGRAPHER",
+    "https://www.silver-tribe.com/cartographer",
     width=480,
     height=710,
     frameless=False,

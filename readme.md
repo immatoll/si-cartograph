@@ -2,6 +2,10 @@
 
 A Python tool that watches your **Frontier chat logs** for system location changes and broadcasts the current location over a WebSocket server in real time.
 
+<p align="center">
+  <img src="assets/1.png" alt="Example">
+</p>
+
 ---
 
 ## Features
