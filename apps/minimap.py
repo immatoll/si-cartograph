@@ -3,10 +3,10 @@ import webview
 
 def create_window(frameless=False):
     webview.create_window(
-        "EFC.Reporter",
-        "https://www.silver-tribe.com/reporter",
-        width=480,
-        height=450,
+        "SILVER.INTEL.MINIMAP",
+        "https://www.silver-tribe.com/map",
+        width=400,
+        height=400,
         frameless=frameless,
         on_top=True,
     )

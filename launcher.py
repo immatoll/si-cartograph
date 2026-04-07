@@ -1,8 +1,9 @@
 import threading
 import sys
+import webview
 
 from apps.locator import main as locator_main
-from apps.overlay import main as overlay_main
+from apps import overlay, minimap
 
 
 def run_locator():
@@ -20,11 +21,13 @@ def main():
     locator_thread.start()
 
     print("Locator started.")
-    print("Starting overlay...")
+    print("Creating overlay and minimap windows...")
     print(f"Frameless mode: {frameless}")
 
     try:
-        overlay_main(frameless=frameless)
+        overlay.create_window(frameless=frameless)
+        # minimap.create_window(frameless=frameless)
+        webview.start()
     except KeyboardInterrupt:
         print("\nStopping application...")
 
